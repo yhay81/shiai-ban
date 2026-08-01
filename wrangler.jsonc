@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "shiai-ban",
+  "main": "src/worker.tsx",
+  "compatibility_date": "2026-07-27",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "shiai-ban.yhay81.com",
+      "custom_domain": true,
+    },
+  ],
+  "triggers": {
+    "crons": ["47 18 * * *"],
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "shiai-ban",
+      "database_id": "c7166223-68fc-4c99-90e2-5fa6c86e78fc",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+  },
+}

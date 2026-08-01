@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /m/
+Disallow: /p/
+Disallow: /t/
+
+Sitemap: https://shiai-ban.yhay81.com/sitemap.xml
